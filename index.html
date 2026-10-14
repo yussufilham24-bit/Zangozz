@@ -4504,26 +4504,9 @@ startApp();
 }
 
 </script>
-...code yako yote ya ZANGO hapo juu...
-<button id="installBtn" style="display:none; position:fixed; bottom:85px; left:50%; transform:translateX(-50%); background:#f97316; color:#fff; padding:12px 20px; border-radius:30px; border:none; font-weight:bold; z-index:999;">
-  📲 DOWNLOAD ZANGO APP
-</button>
-
 <script>
   if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');
-  let deferredPrompt;
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    document.getElementById('installBtn').style.display = 'block';
-  });
-  document.getElementById('installBtn').addEventListener('click', async () => {
-    deferredPrompt.prompt();
-  });
 </script>
-
 </body>
-</html>
-</body>
-
+</script>
 </html>
